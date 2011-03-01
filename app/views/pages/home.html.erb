@@ -1,0 +1,12 @@
+<h1>Pages#home</h1>
+
+<%-	if user_signed_in? %>
+    <%= current_user.username %>
+<%- else %>
+    <%= "Not signed in" %>
+<%-	 end %>
+
+
+<p><%= link_to "Sign up now!", new_user_registration_path %></p>
+<p><%= link_to "Sign in!", new_user_session_path %></p>
+<p><%= link_to "Sign out!", destroy_user_session_path %></p>
